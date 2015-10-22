@@ -40,18 +40,25 @@ describe("__ TEST BDD __", function() {
     expect(result).to.equal(0);
   });
 
-  it("convertir 1", function() {
-        original.value = "45C";
-        convertir()
-        expect(converted.innerHTML).to.equal("113 Fahrenheit");
-    });
 
-    it("32F === 0C", function() {
+  it("32F === 0C", function() {
     var temp = new Temperatura();
     temp.set_valor(32);
     temp.set_tipo("F");
-    var res = temp.convertir();
+    var result = convertir();
     expect(result).to.equal(0);
+  });
+  
+  it("Prueba4", function() {
+        original.value = "32F";
+        convertir()
+        expect(converted.innerHTML).to.equal("0 Celsius");
+    });
+    
+  it("Prueba 5", function() {
+        original.value = "45C";
+        convertir()
+        expect(converted.innerHTML).to.equal("113 Fahrenheit");
     });
         
         it("convertir()", function() {
