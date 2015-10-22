@@ -12,13 +12,6 @@
   "scripts": {
     "karma": "./node_modules/karma/bin/karma start karma.conf.js --single-run"
   },
-  "scripts": {
-  "test": "vows --spec"
-  },
-  "scripts": {
-  "test": "expresso test/*"
-  },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alu0100498820/P2SYTW.git"
