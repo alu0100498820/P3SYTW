@@ -1,5 +1,4 @@
 // Karma configuration
-// Generated on Thu Oct 22 2015 17:12:02 GMT+0100 (WEST)
 
 module.exports = function(config) {
   config.set({
@@ -13,19 +12,16 @@ module.exports = function(config) {
     frameworks: ['mocha', 'chai'],
 
     client: {
-      mocha: {
-        ui: 'bdd'
-      }
+          mocha: {
+            ui: 'bdd'
+          }
     },
-
-
     // list of files / patterns to load in the browser
     files: [
-      'test/index.html',
-      '*.js',
-      'test/*.js'
-    ],
-
+        'tests/index.html',
+        'temperature.js',
+        'tests/*.js'
+      ],
 
     // list of files to exclude
     exclude: [
@@ -37,8 +33,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'test/test_blanket.html': ['html2js'],
-      'test/index.html': ['html2js']
+     'test/test_blanket.html': ['html2js'],
+     'test/index.html': ['html2js']
     },
 
 
@@ -67,22 +63,11 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
-
-    customLaunchers: {
-      Chrome_travis_ci: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    },
+    browsers: ['Firefox'],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true
+    singleRun: false
   })
-
-  if(process.env.TRAVIS){
-    config.browsers = ['Chrome_travis_ci'];
-  }
 }
