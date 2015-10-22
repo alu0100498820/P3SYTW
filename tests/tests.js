@@ -39,4 +39,22 @@ describe("__ TEST BDD __", function() {
     var result = temp.pasar_a_c();
     expect(result).to.equal(0);
   });
+
+  it("convertir 1", function() {
+        original.value = "45C";
+        convertir()
+        expect(converted.innerHTML).to.equal("113 Fahrenheit");
+    });
+
+    it("convertir 2", function() {
+            original.value = "32F";
+            convertir()
+            expect(converted.innerHTML).to.equal("0 Celsius");
+        });
+        it('Hola = error', function() {
+            original.value = "Hola";
+            convertir()
+            expect(converted.innerHTML).to.equal('ERROR! Pruebe algo como esto \'-4.2C\' o \'-4.2e15C\'', /ERROR/);
+        });
+
 });
