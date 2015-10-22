@@ -27,3 +27,9 @@
 > *Ejecución de Pruebas*
 
   * http://alu0100498820.github.io/P3SYTW/tests/test_blanket.html
+
+
+
+> *Ejecución de Travis*
+
+  * https://travis-ci.org/alu0100498820/P3SYTW
