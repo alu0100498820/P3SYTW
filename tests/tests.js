@@ -56,5 +56,14 @@ describe("__ TEST BDD __", function() {
             convertir()
             expect(converted.innerHTML).to.equal('ERROR! Pruebe algo como esto \'-4.2C\' o \'-4.2e15C\'', /ERROR/);
         });
+        
+        it("convertir()", function() {
+      window.onload = function() {
+        ini.value = "0C";
+        convertir();
+
+        expect(resultado.innerHTML).to.equal("El resultado es: 32.0576 F");
+      }
+    });
 
 });
