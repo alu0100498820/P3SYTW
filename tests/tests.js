@@ -40,34 +40,21 @@ describe("__ TEST BDD __", function() {
     expect(result).to.equal(0);
   });
 
-
-  it("32F === 0C", function() {
-    var temp = new Temperatura();
-    temp.set_valor(32);
-    temp.set_tipo("F");
-    var result = convertir();
-    expect(result).to.equal(0);
-  });
-  
-  it("Prueba4", function() {
-        original.value = "32F";
-        convertir()
-        expect(converted.innerHTML).to.equal("0 Celsius");
-    });
-    
-  it("Prueba 5", function() {
+  it("convertir 1", function() {
         original.value = "45C";
         convertir()
         expect(converted.innerHTML).to.equal("113 Fahrenheit");
     });
-        
-        it("convertir()", function() {
-        window.onload = function() {
-        ini.value = "0C";
-        convertir();
 
-        expect(resultado.innerHTML).to.equal("El resultado es: 32.0576 F");
-      }
-    });
+    it("convertir 2", function() {
+            original.value = "32F";
+            convertir()
+            expect(converted.innerHTML).to.equal("0 Celsius");
+        });
+    it('Hola = error', function() {
+            original.value = "Hola";
+            convertir()
+            expect(converted.innerHTML).to.equal('ERROR! Pruebe algo como esto \'-4.2C\' o \'-4.2e15C\'', /ERROR/);
+        });
 
 });
